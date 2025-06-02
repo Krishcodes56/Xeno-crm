@@ -1,0 +1,175 @@
+/* Login.module.css - Aesthetic, interactive, and visually engaging */
+
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #181c2f 0%, #504099 50%, #ffe066 100%);
+  background-size: 200% 200%;
+  animation: bg-move 10s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes bg-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.login-container {
+  background: rgba(35, 41, 70, 0.98);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px 0 rgba(80, 64, 153, 0.18), 0 1.5px 6px 0 #50409933;
+  padding: 56px 44px 40px 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ffe06655 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+  animation: float1 6s ease-in-out infinite alternate;
+}
+.login-container::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #50409955 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+  animation: float2 7s ease-in-out infinite alternate;
+}
+@keyframes float1 {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(30px) scale(1.1);}
+}
+@keyframes float2 {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-30px) scale(1.1);}
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #ffe066 0%, #504099 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+  text-shadow: 0 2px 12px #23294688;
+  animation: pop-in 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.8);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.subtitle {
+  color: #bfc6e0;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
+  text-align: center;
+  z-index: 1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.login-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.login-with-google-btn {
+  background: linear-gradient(90deg, #ffe066 0%, #504099 100%);
+  color: #232946;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(80, 64, 153, 0.18), 0 1.5px 6px 0 #ffe06633;
+  min-width: 220px;
+  transition: 
+    background 0.3s cubic-bezier(.4,0,.2,1),
+    color 0.2s cubic-bezier(.4,0,.2,1),
+    transform 0.18s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.2s cubic-bezier(.4,0,.2,1),
+    letter-spacing 0.2s;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+.login-with-google-btn span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.login-with-google-btn::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg') no-repeat center/contain;
+  filter: drop-shadow(0 2px 8px #50409944);
+  opacity: 0.95;
+  transition: left 0.3s;
+}
+
+.login-with-google-btn:hover::before {
+  left: 12px;
+}
+
+.login-with-google-btn:hover,
+.login-with-google-btn:focus {
+  background: linear-gradient(90deg, #504099 0%, #ffe066 100%);
+  color: #ffe066;
+  transform: scale(1.06) rotate(-1deg);
+  box-shadow: 0 8px 32px rgba(80, 64, 153, 0.22), 0 2px 12px #ffe06633;
+  letter-spacing: 1.5px;
+}
+
+.login-with-google-btn:hover span,
+.login-with-google-btn:focus span {
+  color: #ffe066;
+}
+
+.login-with-google-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(80, 64, 153, 0.18);
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 32px 10px 24px 10px;
+    min-width: 0;
+    width: 98vw;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}

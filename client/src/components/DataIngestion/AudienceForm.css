@@ -1,0 +1,245 @@
+/* Aesthetic dark theme for AudienceForm */
+
+.max-w-lg {
+    max-width: 700px;
+  }
+  
+  .rules-container {
+    padding-bottom: 20px;
+  }
+  
+  .rule-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .rule-fields,
+  .rule-operator,
+  .rule-value {
+    width: 28%;
+    margin-right: 10px;
+  }
+  
+  .rule-fields select,
+  .rule-operator select,
+  .rule-value input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #313866;
+    border-radius: 6px;
+    background: #181c2f;
+    color: #f5f6fa;
+    font-size: 15px;
+    transition: border 0.2s;
+  }
+  
+  .rule-fields select:focus,
+  .rule-operator select:focus,
+  .rule-value input[type="text"]:focus {
+    border-color: #504099;
+    outline: none;
+    box-shadow: 0 0 6px #50409955;
+  }
+  
+  .rule-remove button {
+    background: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .rule-remove button:hover {
+    background: #d32f2f;
+  }
+  
+  .add-rule-button {
+    background: linear-gradient(90deg, #504099 0%, #313866 100%);
+    color: #f5f6fa;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+  }
+  
+  .add-rule-button:hover {
+    background: linear-gradient(90deg, #313866 0%, #504099 100%);
+    color: #ffe066;
+    transform: scale(1.04);
+  }
+  
+  .message-field input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #313866;
+    border-radius: 6px;
+    background: #181c2f;
+    color: #f5f6fa;
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: border 0.2s;
+  }
+  
+  .message-field input[type="text"]:focus {
+    border-color: #504099;
+    outline: none;
+    box-shadow: 0 0 6px #50409955;
+  }
+  
+  .check-audience {
+    margin-bottom: 20px;
+  }
+  
+  .check-audience-button {
+    background: linear-gradient(90deg, #504099 0%, #313866 100%);
+    color: #f5f6fa;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+  }
+  
+  .check-audience-button:hover {
+    background: linear-gradient(90deg, #313866 0%, #504099 100%);
+    color: #ffe066;
+    transform: scale(1.04);
+  }
+  
+  .audience-size {
+    color: #4caf50;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+  
+  .submit-button {
+    text-align: center;
+  }
+  
+  .submit-button button {
+    background: linear-gradient(90deg, #504099 0%, #313866 100%);
+    color: #f5f6fa;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+    box-shadow: 0 2px 12px rgba(49, 54, 102, 0.18);
+  }
+  
+  .submit-button button:hover {
+    background: linear-gradient(90deg, #313866 0%, #504099 100%);
+    color: #ffe066;
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(80, 64, 153, 0.18);
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: none;
+  }
+  
+  .form-container {
+    border: none;
+    padding: 32px 28px;
+    background: #232946;
+    box-shadow: 0 4px 24px rgba(49, 54, 102, 0.18);
+    border-radius: 12px;
+    max-width: 700px;
+    width: 100%;
+  }
+  
+  /* Enhanced styling for the Create Campaign heading */
+  .heading {
+    font-size: 2.2rem;
+    color: #f5f6fa;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid #504099;
+    padding-bottom: 0.5rem;
+    margin-top: -20px;
+    letter-spacing: 1px;
+    background: none;
+  }
+  
+  .heading::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #4caf50;
+    margin: 0 auto 1rem;
+  }
+  
+  .logical-operator-field {
+    margin-top: 10px;
+  }
+  
+  .logical-operator-field button {
+    background: linear-gradient(90deg, #504099 0%, #313866 100%);
+    color: #f5f6fa;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, color 0.2s, transform 0.2s;
+  }
+  
+  .logical-operator-field button,
+.logical-operator-field button:active,
+.logical-operator-field button:focus {
+  color: #f5f6fa !important; /* Always visible on dark background */
+  background: linear-gradient(90deg, #504099 0%, #313866 100%);
+}
+
+.logical-operator-field button:hover {
+  background: linear-gradient(90deg, #313866 0%, #504099 100%);
+  color: #ffe066 !important; /* Yellow for contrast on hover */
+}
+
+.logical-operator-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #313866;
+  border-radius: 6px;
+  background: #181c2f;           /* Dark background */
+  color: #f5f6fa;                /* Bright text */
+  font-size: 15px;
+  transition: border 0.2s;
+  appearance: none;              /* Remove default arrow for custom styling */
+}
+
+.logical-operator-select:focus {
+  border-color: #504099;
+  outline: none;
+  box-shadow: 0 0 6px #50409955;
+  background: #232946;           /* Slightly lighter on focus */
+  color: #ffe066;                /* Yellow text on focus for visibility */
+}
+
+/* Add other CSS styling for your form as needed */
